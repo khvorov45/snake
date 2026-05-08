@@ -37,7 +37,7 @@
 // Mandatory modules: rcore, rlgl
 //------------------------------------------------------------------------------------
 #ifndef SUPPORT_MODULE_RSHAPES
-    #define SUPPORT_MODULE_RSHAPES      0
+    #define SUPPORT_MODULE_RSHAPES      1
 #endif
 #ifndef SUPPORT_MODULE_RTEXTURES
     #define SUPPORT_MODULE_RTEXTURES    1
@@ -92,7 +92,7 @@
 #if !SUPPORT_PARTIALBUSY_WAIT_LOOP && !SUPPORT_BUSY_WAIT_LOOP
     // Use a partial-busy wait loop, in this case frame sleeps for most of the time,
     // but then runs a busy loop at the end for accuracy
-    #define SUPPORT_PARTIALBUSY_WAIT_LOOP   0
+    #define SUPPORT_PARTIALBUSY_WAIT_LOOP   1
 #endif
 #ifndef SUPPORT_SCREEN_CAPTURE
     // Allow automatic screen capture of current screen pressing F12, defined in KeyCallback()
