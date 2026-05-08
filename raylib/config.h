@@ -46,7 +46,7 @@
     #define SUPPORT_MODULE_RTEXT        1       // WARNING: It requires SUPPORT_MODULE_RTEXTURES to load sprite font textures
 #endif
 #ifndef SUPPORT_MODULE_RMODELS
-    #define SUPPORT_MODULE_RMODELS      0
+    #define SUPPORT_MODULE_RMODELS      1
 #endif
 #ifndef SUPPORT_MODULE_RAUDIO
     #define SUPPORT_MODULE_RAUDIO       0
