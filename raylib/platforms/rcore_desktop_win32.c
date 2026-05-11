@@ -1203,7 +1203,8 @@ void DisableCursor(void)
         LONG centerX = topleft.x + width/2;
         LONG centerY = topleft.y + height/2;
         RECT clipRect = { centerX, centerY, centerX + 1, centerY + 1 };
-        if (!ClipCursor(&clipRect)) TRACELOG(LOG_WARNING, "WIN32: Failed to clip cursor [ERROR: %lu]", GetLastError());
+        int clipCursorResult = ClipCursor(&clipRect);
+        if (!clipCursorResult) TRACELOG(LOG_WARNING, "WIN32: Failed to clip cursor [ERROR: %lu]", GetLastError());
 
         CORE.Input.Mouse.previousPosition = (Vector2){ 0, 0 };
         CORE.Input.Mouse.currentPosition = (Vector2){ 0, 0 };
@@ -1969,7 +1970,7 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lpara
         } break;
         case WM_MOUSEMOVE:
         {
-            if (!CORE.Input.Mouse.cursorLocked)
+            // if (!CORE.Input.Mouse.cursorLocked)
             {
                 CORE.Input.Mouse.currentPosition.x = (float)GET_X_LPARAM(lparam);
                 CORE.Input.Mouse.currentPosition.y = (float)GET_Y_LPARAM(lparam);

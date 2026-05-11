@@ -62,7 +62,7 @@
 #ifndef SUPPORT_CAMERA_SYSTEM
     // Camera module is included (rcamera.h) and multiple predefined
     // cameras are available: free, 1st/3rd person, orbital
-    #define SUPPORT_CAMERA_SYSTEM           0
+    #define SUPPORT_CAMERA_SYSTEM           1
 #endif
 #ifndef SUPPORT_GESTURES_SYSTEM
     // Gestures module is included (rgestures.h) to support gestures detection: tap, hold, swipe, drag
